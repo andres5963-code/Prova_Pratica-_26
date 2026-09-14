@@ -25,6 +25,9 @@ img {
  --font-body: "Mona Sans";
  --color-black: #000;
  --color-white:#fff;
+ --color-border-muted: #191f1b;
+ --container-width: 1280px;
+ --spacing-64: 64px
 }
 
 body {
@@ -35,5 +38,19 @@ body {
 .hero {
     background: var(--color-black);
     color: var(--color-white);
+    text-align: center;
 }
-.hero-
+.hero-content {
+    padding: var(--spacing-64);
+    border-left: 1px solid var(--color-border-muted);
+    border-right: 1px solid var(--color-border-muted);
+}
+.container {
+    max-width: var(--container-width);
+    margin-left:auto;
+    margin-right: auto;
+}
+.int {
+    text-align: center;
+    font-family: "Mona sans mono";
+}

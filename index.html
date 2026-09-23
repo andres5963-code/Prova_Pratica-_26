@@ -5,27 +5,60 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Prova Pratica</title>
-  <link rel="stylesheet" href="style.css" </head>
-
+  <link rel="stylesheet" href="style.css" 
+</head>
+<script src="script.js"></script>
 <body>
   <header>
-    <nav class="navigation"> 
+  <nav class="navigation">
+
     <div class="git-home">
-      <svg width="31" height="30" viewBox="0 0 31 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-           <path fill-rule="evenodd" clip-rule="evenodd" d="M15.3333 0C6.86167 0 0 6.86167 0 15.3333C0 22.1183 4.38917 27.8492 10.4842 29.8808C11.2508 30.015 11.5383 29.555 11.5383 29.1525C11.5383 28.7883 11.5192 27.5808 11.5192 26.2967C7.66667 27.0058 6.67 25.3575 6.36333 24.495C6.19083 24.0542 5.44333 22.6933 4.79167 22.3292C4.255 22.0417 3.48833 21.3325 4.7725 21.3133C5.98 21.2942 6.8425 22.425 7.13 22.885C8.51 25.2042 10.7142 24.5525 11.5958 24.15C11.73 23.1533 12.1325 22.4825 12.5733 22.0992C9.16167 21.7158 5.59667 20.3933 5.59667 14.5283C5.59667 12.8608 6.19083 11.4808 7.16833 10.4075C7.015 10.0242 6.47833 8.4525 7.32167 6.34417C7.32167 6.34417 8.60583 5.94167 11.5383 7.91583C12.765 7.57083 14.0683 7.39833 15.3717 7.39833C16.675 7.39833 17.9783 7.57083 19.205 7.91583C22.1375 5.9225 23.4217 6.34417 23.4217 6.34417C24.265 8.4525 23.7283 10.0242 23.575 10.4075C24.5525 11.4808 25.1467 12.8417 25.1467 14.5283C25.1467 20.4125 21.5625 21.7158 18.1508 22.0992C18.7067 22.5783 19.1858 23.4983 19.1858 24.9358C19.1858 26.9867 19.1667 28.635 19.1667 29.1525C19.1667 29.555 19.4542 30.0342 20.2208 29.8808C26.2775 27.8492 30.6667 22.0992 30.6667 15.3333C30.6667 6.86167 23.805 0 15.3333 0V0Z" fill="white"/>
+
+      <svg width="31" height="30" viewBox="0 0 31 30" fill="none"
+        xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M15.3333 0C6.86167 0 0 6.86167 0 15.3333C0 22.1183 4.38917 27.8492 10.4842 29.8808C11.2508 30.015 11.5383 29.555 11.5383 29.1525C11.5383 28.7883 11.5192 27.5808 11.5192 26.2967C7.66667 27.0058 6.67 25.3575 6.36333 24.495C6.19083 24.0542 5.44333 22.6933 4.79167 22.3292C4.255 22.0417 3.48833 21.3325 4.7725 21.3133C5.98 21.2942 6.8425 22.425 7.13 22.885C8.51 25.2042 10.7142 24.5525 11.5958 24.15C11.73 23.1533 12.1325 22.4825 12.5733 22.0992C9.16167 21.7158 5.59667 20.3933 5.59667 14.5283C5.59667 12.8608 6.19083 11.4808 7.16833 10.4075C7.015 10.0242 6.47833 8.4525 7.32167 6.34417C7.32167 6.34417 8.60583 5.94167 11.5383 7.91583C12.765 7.57083 14.0683 7.39833 15.3717 7.39833C16.675 7.39833 17.9783 7.57083 19.205 7.91583C22.1375 5.9225 23.4217 6.34417 23.4217 6.34417C24.265 8.4525 23.7283 10.0242 23.575 10.4075C24.5525 11.4808 25.1467 12.8417 25.1467 14.5283C25.1467 20.4125 21.5625 21.7158 18.1508 22.0992C18.7067 22.5783 19.1858 23.4983 19.1858 24.9358C19.1858 26.9867 19.1667 28.635 19.1667 29.1525C19.1667 29.555 19.4542 30.0342 20.2208 29.8808C26.2775 27.8492 30.6667 22.0992 30.6667 15.3333C30.6667 6.86167 23.805 0 15.3333 0V0Z"
+          fill="white"/>
       </svg>
-      <p> GitHub </p> <p class="text-muted">Student Stories</p>
+
+      <p>GitHub</p>
+      <p class="text-muted">Student Stories</p>
+
     </div>
 
-    <div class="nav-items">
-      <a class="nav-item-button" href="#concept"> concept </a>
-      <a class="nav-item-button" href="#sitemap"> sitemap </a>
-      <a class="nav-item-button" href="#assets"> assets </a>
-      <a class="nav-item-button" href="#highlights"> highlights </a>
-      <a class="nav-item-button" href="#case study"> case study </a>
+    <div class="navigation-menu">
+
+      <button
+        class="navigation-toggle"
+        type="button"
+        aria-label="Apri menu"
+        popovertarget="navigation-panel"
+      >
+        <span class="navigation-icon navigation-icon-open">☰</span>
+        <span class="navigation-icon navigation-icon-close">×</span>
+      </button>
+
+      <nav
+        id="navigation-panel"
+        class="navigation-panel"
+        popover="auto"
+        aria-label="Menu di navigazione"
+      >
+        <div class="nav-items">
+
+          <a class="nav-item-button" href="#concept">concept</a>
+          <a class="nav-item-button" href="#sitemap">sitemap</a>
+          <a class="nav-item-button" href="#assets">assets</a>
+          <a class="nav-item-button" href="#highlights">highlights</a>
+          <a class="nav-item-button" href="#case-study">case study</a>
+
+        </div>
+      </nav>
+
     </div>
-    </nav>
-  </header>
+
+  </nav>
+</header>
   <main>
     <section class="hero">
       <div class="hero-content container">
@@ -46,12 +79,19 @@
     <section class="biography">
       <div class="biography-content">
         <p class="biography-item-enphasis"> Andrea Policante </p>
-        <p class="biography-item"> · </p>
+        <p class="biography-item-dot"> · </p>
         <p class="biography-item"> UX/UI Design </p>
-        <p class="biography-item"> · </p>
+        <p class="biography-item-dot"> · </p>
         <p class="biography-item"> ITS Web Design & Strategie Digitali </p>
-        <p class="biography-item"> · </p>
+        <p class="biography-item-dot"> · </p>
         <p class="biography-item"> CFP Bauer </p>
+      </div>
+    </section>
+    <section class="intro">
+      <div class="intro-content">
+          <p class="eyebrow-text"> What's sound of childhood? </p>
+        <h2 class="heading-size-2-regular"> Sounds of Childhood is a website that explores Nintendo's history through its composers, telling childhood games from a sound perspective.</h2>
+        <p class="text-big">The project features five composers — Koji Kondo, Mahito Yokota, Kazumi Totaka, Toru Minegishi, and Kenta Nagata — and the soundtracks that have defined generations of players.</p>
       </div>
     </section>
   </main>

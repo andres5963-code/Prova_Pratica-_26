@@ -39,6 +39,8 @@ img {
  --color-button-primary-bg: #08872B;
  --color-button-secondary-bg: rgba(255,255,255, 0.12);
  --border-color: rgba(255,255,255, 0.06);
+ --brand-color-text-muted: #A4AEA6;
+ --brand-color-text-default: #fff;
 }
 @media(max-width: 640px) {
 :root {
@@ -67,6 +69,14 @@ body {
     flex-direction: column;
     align-items: center;
     gap:var(--hero-content-gap);
+    background-image:linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),  url(assets/images/Hero-img.png);
+    background-size: cover; 
+    background-position: top;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2; 
 }
 .container {
     max-width: var(--container-width);
@@ -146,3 +156,80 @@ body {
     outline: 2px solid rgb(255, 123, 0);
     outline-offset: 0.15em;
 }
+
+.git-home {
+    display: flex;
+    gap: 0.5em;
+    color: var(--brand-color-text-default);
+    align-items: center;
+    font-family: var(--family, "Mona Sans");
+    font-size: 16px;
+    line-height: 150%;
+}
+
+.text-muted {
+    color: var(--brand-color-text-muted);
+font-family: var(--family, "Mona Sans");
+font-size: 16px;
+font-style: ;
+line-height: 150%;
+}
+
+.navigation {
+    background-color: #000;
+    display: flex;
+    max-width: 10000px;
+    gap: 32px;
+    padding:0 32px;
+    height: 75px;
+    justify-content: left;
+    align-items: center;
+    flex-shrink: 0;
+    align-self: stretch;
+    border-bottom: 1px solid var(--color-border-muted);
+}
+
+.nav-items {
+    display: flex;
+    align-items: center;
+    align-self: stretch;
+    padding:0 16px;
+    border-left: 1px solid var(--color-border-muted);
+
+}
+.nav-item-button {
+    text-transform: capitalize;
+    color: var(--brand-color-text-muted);
+    font-family: var(--family, "Mona Sans");
+    font-size: 14px;
+    line-height: 150%;
+    text-decoration: none;
+    padding: 0 16px;
+}
+.nav-item-button:hover {
+    text-decoration: underline;
+}
+.biography-content {
+    padding: 16px 80px;
+    gap: 8px;
+    display: flex;
+    flex-shrink: 0;
+    align-self: stretch;
+    border: 1px solid var(--color-muted);
+}
+.biography-item {
+color: var(--brand-color-text-muted);
+font-family: "Mona Sans";
+font-size: 13px;
+font-style: normal;
+line-height: normal;
+}
+
+.biography-item-enphasis {
+color: var(--color-black);
+font-family: "Mona Sans";
+font-size: 13px;
+font-weight: 500;
+line-height: normal;
+}
+

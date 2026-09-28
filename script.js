@@ -11,7 +11,7 @@ function updateNavigationLayout() {
 
     if (mobileMedia.matches) {
 
-        // MOBILE
+        
         navigationPanel.setAttribute('popover', 'auto');
 
         navigationButton.setAttribute(
@@ -23,7 +23,7 @@ function updateNavigationLayout() {
 
     } else {
 
-        // DESKTOP
+        
         navigationPanel.removeAttribute('popover');
 
         navigationButton.removeAttribute('popovertarget');
@@ -33,7 +33,6 @@ function updateNavigationLayout() {
 }
 
 
-/* Controlliamo se il browser supporta Popover */
 
 if (supportsNavigation) {
 
@@ -41,8 +40,6 @@ if (supportsNavigation) {
 
 } else {
 
-    // Se il browser non supporta Popover,
-    // mostriamo comunque il menu.
 
     navigationPanel.removeAttribute('popover');
 
@@ -50,12 +47,9 @@ if (supportsNavigation) {
 }
 
 
-/* Quando cambia la dimensione dello schermo */
-
 mobileMedia.addEventListener('change', updateNavigationLayout);
 
 
-/* Quando clicco un link del menu */
 
 navigationPanel.addEventListener('click', function(event) {
 
@@ -69,9 +63,6 @@ navigationPanel.addEventListener('click', function(event) {
 
     if (!target) return;
 
-
-    // Se siamo su mobile e il popover è aperto,
-    // lo chiudiamo dopo aver cliccato.
 
     if (
         supportsNavigation &&

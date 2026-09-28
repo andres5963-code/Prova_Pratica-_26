@@ -39,11 +39,12 @@ img {
  --color-button-primary-bg: #08872B;
  --color-button-secondary-bg: rgba(255,255,255, 0.12);
  --border-color: rgba(255,255,255, 0.06);
- --brand-color-text-muted: ##58635B;
+ --brand-color-text-muted: #58635B;
  --brand-color-text-default: #fff;
  --brand-color-canvas-muted: #F9FBF9;
  --brand-color-border-muted: #E4EBE6;
  --brand-Link-color-accent: #0055D5;
+ --heading-size-3: 28px;
 }
 @media(max-width: 640px) {
 :root {
@@ -265,7 +266,7 @@ line-height: 150%;
 .nav-item-button {
     text-transform: capitalize;
 
-    color: var(--brand-color-text-muted);
+    color: var(--color-muted);
 
     font-family: var(--font-body);
     font-size: 14px;
@@ -552,25 +553,29 @@ line-height: 1.4em;
 .nav-laterale {
     display: flex;
     flex-direction: column;
-    justify-content: left;
     gap: 8px;
-    align-items: center;
+    align-items: left;
     text-align: left;
+    width:100%;
+    min-width: 200px;
+    padding-left: 16px;
 }
 
 .nav-laterale-box {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: left;
+    justify-content: left;
+    text-align: left;
     gap: 24px;
-    align-self: stretch;
-    width: 251.484px;
+    width:250px;
 }
 .nav-title {
     color: var(--color-black);
 font-family: var(--family, "Mona Sans");
 font-size: 22px;
 line-height: 1.2em;
+
 }
 
 .nav-item-button-lat-sp {
@@ -590,9 +595,60 @@ text-decoration: none;
     gap: 64px;
 }
 
-.normal-text { 
+.body-text { 
     color: var(--brand-color-text-muted);
     font-family: "Mona Sans";
     font-size: 18px;
     line-height: 1.2em;
+}
+
+.heading-size-3 {
+    font-size: var(--heading-size-3);
+    font-weight: 500px;
+    font-family: "Mona Sans";
+    color:var(--color-black);
+}
+.concept-box {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: left;
+    gap:16px;
+    max-width: 936px;
+}
+@media (max-width: 1000px) {
+    .concept-content {
+        display: flex;
+    flex-direction: column;
+    gap: 64px;
+    }
+}
+
+.case-study-heading {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 440px;
+}
+.case-study-content {
+    padding: 60px 61px;
+}
+.tab {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.heading-size-4 {
+    color: var(--color-black);
+font-family: var(--family, "Mona Sans");
+font-size: 20px;
+font-weight: 400;
+line-height: 1.2em;
+}
+
+.body-small {
+    color: var(--brand-color-border-muted);
+font-family: var(--family, "Mona Sans");
+font-size: 16px;
+line-height: 1.2em; 
 }

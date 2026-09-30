@@ -74,3 +74,20 @@ navigationPanel.addEventListener('click', function(event) {
     }
 
 });
+
+const tabs = document.querySelectorAll(".tab");
+const buttons = document.querySelectorAll(".tab-button");
+
+buttons.forEach((button, index) => {
+
+    button.addEventListener("click", () => {
+
+        tabs.forEach(tab => {
+            tab.classList.remove("is-selected");
+        });
+
+        tabs[index].classList.add("is-selected");
+
+    });
+
+});

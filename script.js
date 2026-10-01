@@ -76,9 +76,11 @@ navigationPanel.addEventListener('click', function(event) {
 });
 
 const tabs = document.querySelectorAll(".tab");
-const buttons = document.querySelectorAll(".tab-button");
+const images = document.querySelectorAll(".tabs-image");
 
-buttons.forEach((button, index) => {
+tabs.forEach((tab, index) => {
+
+    const button = tab.querySelector(".tab-button");
 
     button.addEventListener("click", () => {
 
@@ -86,7 +88,13 @@ buttons.forEach((button, index) => {
             tab.classList.remove("is-selected");
         });
 
-        tabs[index].classList.add("is-selected");
+        tab.classList.add("is-selected");
+
+        images.forEach(image => {
+            image.classList.remove("is-visible");
+        });
+
+        images[index].classList.add("is-visible");
 
     });
 

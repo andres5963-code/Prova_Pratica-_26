@@ -635,14 +635,14 @@ text-decoration: none;
     flex-direction: row;
     gap: 24px;
     flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
+    
 }
 @media (max-width: 800px) {
     .sitemap-content {
         display: flex;
         gap: 32px;
         justify-content: left;
+        
         align-items: left;
     }
 }
@@ -688,7 +688,22 @@ text-decoration: none;
     }
     
 }
+.sitemap-container {
+    display: flex;
+    flex-direction: column;
+    gap: 128px;
+}
 
+.sitemap {
+      border-bottom: 1px solid var(--brand-color-border-muted);
+    background: var(--brand-color-canvas-muted);
+}
+@media (max-width: 350px) {
+    .sitemap-icon {
+        display: none;
+    
+    }
+}
 
 
 

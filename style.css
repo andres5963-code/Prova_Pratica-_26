@@ -21,6 +21,20 @@ img {
   font-display: swap;
   font-feature-settings: "liga" 0;
 }
+@font-face {
+  font-family: "kG Blank Space";
+  src: url("assets/fonts/KGBlankSpaceSketch.ttf") format("truetype");
+  font-weight: 200 900;
+  font-display: swap;
+  font-feature-settings: "liga" 0;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("assets/fonts/Montserrat-Medium.otf") format("otf");
+  font-weight: 200 900;
+  font-display: swap;
+  font-feature-settings: "liga" 0;
+}
 :root {
  --font-body: "Mona Sans";
  --font-mono: "Mona Sans Mono";
@@ -707,6 +721,60 @@ text-decoration: none;
 
 
 
+.assets-container {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+.assets-heading {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 440px;
+}
+#typography-and-palette {
+    font-weight: 500;
+}
+.assets-text {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.assets-typo {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.assets-typo-item {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.alphabet-typo {
+    border: 1px solid var(--brand-color-border-muted);
+    padding: 24px;
+    border-radius: 12px;
+    gap: 16px;
+    display: flex;
+    flex-direction: column;
+    max-width: 512px;
+}
+.typo-1 {
+    font-family: "KG Blank Space";
+    line-height: 1.2em;
+    color: var(--color-black);
+}
+.typo-2 {
+    font-family: "Montserrat";
+    line-height: 1.2em;
+    color: var(--color-black);
+}
+.assets-palette {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
 
 
 
@@ -849,7 +917,6 @@ border: 1px solid var(--brand-color-border-muted);
 
 .heading-size-4 {
     color: var(--color-black);
-
     font-family: var(--family, "Mona Sans");
     font-size: 20px;
     font-weight: 400;

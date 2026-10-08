@@ -405,8 +405,6 @@ line-height: 150%;
         text-decoration: none;
     }
 
-    /* Quando il popover è aperto */
-
     .navigation-menu:has(.navigation-panel:popover-open)
     .navigation-icon-open {
         display: none;
@@ -970,6 +968,10 @@ text-decoration: none;
         
     }
 }
+.highlights{
+    background: var(--brand-color-canvas-muted);
+} 
+
 
 .highlights-heading {
     display: flex;
@@ -981,17 +983,83 @@ text-decoration: none;
     display: flex;
     flex-direction: row;
     gap: 24px;
+    
 }
-@media (max-width:800px) {
+@media (max-width:1000px) {
+    .highlights-card-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap ;
+        max-width: 100%;
+        justify-content: center;
+    }
+}
+.card {
+    max-width: 270px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: var(--color-white);
+    border-radius: 8px;
+    gap:24px;
+    box-shadow:0.0em 0.1em  5px var(--brand-color-text-muted);
+}
+.card-highlights-image {
+    max-width: 260px;
+    border-radius: 8px 8px 8px 8px;
+    overflow: hidden;
+    justify-content: center;
+    margin: auto;
+}
+@media (max-width: 750px) {
     .highlights-card-container {
         display: flex;
         flex-direction: column;
-        gap: 16px;
+    }
+    .card {
+        max-width: 100%;
+        justify-content: left;
+    }
+    .card-highlights-image {
+        display: flex;
+        justify-content: center;
+        align-self: center;
+        align-items: center;
+        object-fit: contain;    
+        margin: 0;
+        max-width: 100%;
+        max-height: 150px;
+
+
     }
 }
 
-
-
+.highlight-label {
+    border-radius: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.00);
+    background: #F2F5F3 ;
+    padding: 8px;
+    padding-left: 16px;
+    width: fit-content;
+}
+.highlight-label-text {
+    overflow: hidden;
+color: var(--color-black);;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+letter-spacing: 0.21px;
+}
+.card-highlight-text {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
 
 
 

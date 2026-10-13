@@ -405,8 +405,6 @@ line-height: 150%;
         text-decoration: none;
     }
 
-    /* Quando il popover è aperto */
-
     .navigation-menu:has(.navigation-panel:popover-open)
     .navigation-icon-open {
         display: none;
@@ -1013,6 +1011,7 @@ text-decoration: none;
     display: flex;
     flex-wrap: wrap;
     gap: 24px;
+    
 }
 
 .card {

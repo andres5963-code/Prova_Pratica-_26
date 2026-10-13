@@ -1,101 +1,70 @@
+
 const navigationButton = document.querySelector('.navigation-toggle');
 const navigationPanel = document.querySelector('.navigation-panel');
 
-const mobileMedia = window.matchMedia('(max-width: 808px)');
-
-const supportsNavigation =
-    'popover' in HTMLElement.prototype;
-
+const mobileMedia = window.matchMedia('(max-width: 807px)');
+const supportsNavigation = 'popover' in HTMLElement.prototype;
 
 function updateNavigationLayout() {
+    if (!navigationButton || !navigationPanel) return;
 
-    if (mobileMedia.matches) {
-
-        
+    if (supportsNavigation && mobileMedia.matches) {
         navigationPanel.setAttribute('popover', 'auto');
-
         navigationButton.setAttribute(
             'popovertarget',
             navigationPanel.id
         );
 
         navigationButton.hidden = false;
-
     } else {
-
-        
         navigationPanel.removeAttribute('popover');
-
         navigationButton.removeAttribute('popovertarget');
-
         navigationButton.hidden = true;
     }
 }
 
-
+updateNavigationLayout();
 
 if (supportsNavigation) {
-
-    updateNavigationLayout();
-
-} else {
-
-
-    navigationPanel.removeAttribute('popover');
-
-    navigationButton.hidden = true;
+    mobileMedia.addEventListener('change', updateNavigationLayout);
 }
 
+if (navigationPanel) {
+    navigationPanel.addEventListener('click', (event) => {
+        const link = event.target.closest('a[href^="#"]');
 
-mobileMedia.addEventListener('change', updateNavigationLayout);
+        if (!link) return;
 
+        if (
+            supportsNavigation &&
+            navigationPanel.matches(':popover-open')
+        ) {
+            navigationPanel.hidePopover();
+        }
+    });
+}
 
-
-navigationPanel.addEventListener('click', function(event) {
-
-    const link = event.target.closest('a[href^="#"]');
-
-    if (!link) return;
-
-    const target = document.getElementById(
-        link.hash.slice(1)
-    );
-
-    if (!target) return;
-
-
-    if (
-        supportsNavigation &&
-        navigationPanel.matches(':popover-open')
-    ) {
-
-        navigationPanel.hidePopover();
-
-    }
-
-});
-
-const tabs = document.querySelectorAll(".tab");
-const images = document.querySelectorAll(".tabs-image");
+const tabs = document.querySelectorAll('.tab');
+const images = document.querySelectorAll('.tabs-image');
 
 tabs.forEach((tab, index) => {
+    const button = tab.querySelector('.tab-button');
 
-    const button = tab.querySelector(".tab-button");
+    if (!button) return;
 
-    button.addEventListener("click", () => {
-
-        tabs.forEach(tab => {
-            tab.classList.remove("is-selected");
+    button.addEventListener('click', () => {
+        tabs.forEach((item) => {
+            item.classList.remove('is-selected');
         });
 
-        tab.classList.add("is-selected");
+        tab.classList.add('is-selected');
 
-        images.forEach(image => {
-            image.classList.remove("is-visible");
+        images.forEach((image) => {
+            image.classList.remove('is-visible');
         });
 
-        images[index].classList.add("is-visible");
-
+        if (images[index]) {
+            images[index].classList.add('is-visible');
+        }
     });
-
 });

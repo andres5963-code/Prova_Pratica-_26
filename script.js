@@ -68,3 +68,38 @@ tabs.forEach((tab, index) => {
         }
     });
 });
+
+/* =========================
+   Animazioni ChatGPT
+========================= */
+
+const revealSections = document.querySelectorAll(
+    'main > section, footer'
+);
+
+revealSections.forEach((section) => {
+    section.classList.add('reveal-section');
+});
+
+const sectionObserver = new IntersectionObserver(
+    (entries) => {
+
+        entries.forEach((entry) => {
+
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+            } else {
+                entry.target.classList.remove('is-visible');
+            }
+
+        });
+
+    },
+    {
+        threshold: 0.12
+    }
+);
+
+revealSections.forEach((section) => {
+    sectionObserver.observe(section);
+});

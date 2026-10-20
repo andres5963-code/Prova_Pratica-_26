@@ -1467,3 +1467,99 @@ border: 1px solid var(--brand-color-border-muted);
     opacity: 0.65;
 }
 
+
+
+
+
+
+/* =========================
+   Animazioni ChatGPT
+========================= */
+
+html {
+    scroll-behavior: smooth;
+}
+
+.reveal-section {
+    opacity: 0;
+    transform: translateY(32px);
+
+    transition:
+        opacity 700ms cubic-bezier(0.22, 1, 0.36, 1),
+        transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal-section.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.tabs-image.is-visible {
+    display: block;
+
+    animation: tab-image-in 420ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@keyframes tab-image-in {
+
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+.accordion-arrow {
+    transition: transform 300ms ease;
+}
+
+.tab.is-selected .accordion-arrow {
+    transform: rotate(180deg);
+}
+
+
+
+@media (max-width: 800px) {
+
+    .text-tab {
+        display: grid;
+
+        grid-template-rows: 0fr;
+        opacity: 0;
+
+        transition:
+            grid-template-rows 350ms cubic-bezier(0.22, 1, 0.36, 1),
+            opacity 250ms ease;
+    }
+
+    .text-tab > * {
+        overflow: hidden;
+    }
+
+    .tab.is-selected .text-tab {
+        grid-template-rows: 1fr;
+        opacity: 1;
+    }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }

@@ -1563,3 +1563,9 @@ html {
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
     }
+}
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
